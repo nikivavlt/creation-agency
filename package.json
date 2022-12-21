@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/nikivavlt/creation-agency/issues"
   },
-  "homepage": "https://github.com/nikivavlt/creation-agency#readme"
+  "homepage": "https://github.com/nikivavlt/creation-agency#readme",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard": "^29.0.0"
+  }
 }
