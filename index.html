@@ -1,14 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
 
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <script src="js/main.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags -->
+    <meta name="author" content="Nikita Ivanov">
+    <meta name="copyright" content="© 2022-2023 Creation Digital Agency">
+    <meta name="adress" content="Lithuania, Vilnius">
+    <meta name="description" content="Creation Internet Marketing Agency - digital services for your business. We provide website development, design, advertising, seo.">
+    <meta name="keywords" content="Creation Agency, creation, digital marketing, internet marketing, website development, web development, design, advertising, seo, search engine optimization">
+    <meta name="description" content="Creation Internet Marketing Agency - digital services for your business. We will help increase the flow of customers.">
+    <meta name="keywords" content="Digital, Marketing, Creation, Internet Marketing">
+
+    <title>Creation Digital Marketing Agency</title>
+
+    <link rel="alternate" hreflang="ru" href="https://creation-agency.com/ru/">
+	<link rel="alternate" hreflang="lt" href="https://creation-agency.com/lt/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+	<link rel="manifest" href="./favicons/site.webmanifest">
+    <meta name="msapplication-config" content="./favicons/site.xml">
+    <meta name="application-name" content="Creation Digital Marketing Agency">
+
+    <!-- Other meta -->
+    <!--- https://stackoverflow.com/questions/48956465/favicon-standard-2022-svg-ico-png-and-dimensions -->
+    <!-- Meta facebook -->
+	<meta property="og:url" content="Это должен быть простой URL без переменных сеанса">
+	<meta property="og:title" content="Заголовок статьи без какого-либо упоминания бренда, например названия сайта">
+	<meta property="og:description" content="Краткое описание контента (обычно 2–4 предложения). Отображается под заголовком публикации на Facebook.">
+	<meta property="og:image" content="URL изображения, которое отображается на Facebook, когда человек делится контентом.">
+    <meta property="og:locale" content="en_US">
+	<meta property="og:locale:alternate" content="en_GB">
+	<meta property="og:locale:alternate" content="en_CA">
+    <meta property="og:site_name" content="Developer Portfolio"/>
+	<meta property="og:type" content="website">
+
+    <!-- Twiter -->
+	<meta name="twitter:title" content="Title">
+	<meta name="twitter:description" content="Description">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="" >
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="images">
+    <meta name="twitter:url" content=""/>
+
+    <!-- Other... -->
+    <meta itemprop="name" content="Developer Portfolio"/>
+    <meta itemprop="url" content=""/>
+    <meta itemprop="description" content="Use Developer Portfolio and create your own personalised portfolio today! With multiple themes to choose from, our easily customisable, user friendly website is designed to cater to developers and freelancers alike."/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a class="logotype" href="#">
+                <img src="./images/logotype.svg" alt="Creation agency logotype">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list grid">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            Blog ?
+                        </a>
+                    </li>
+                    <div class="header__language-menu">
+                        <button href="#" class="nav-link">
+                            EN
+                        </button>
+                        &#9662;
+                        <ul class="language-menu__list">
+                                <li><a href="https://creation-agency.com/lt">LT</a></li>
+                                <li><a href="https://creation-agency.com/ru">RU</a></li>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="nav-close" id="nav-close">&#10006;</div>
+                <div class="nav-socials">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="nav-social" src="./images/navigation-facebook-icon.svg">
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img class="nav-social" src="./images/navigation-linkedin-icon.svg">
+                    </a>
+                    <a href="https://www.github.com" target="_blank">
+                        <img class="nav-social" src="./images/navigation-github-icon.svg">
+                    </a>
+                </div>
+                <div class="nav-button">
+                    <a href="#contact" class="button button-flex">
+                    Start collaborating <i class="fab fa-telegram-plane button-icon"></i>
+                    </a>
+                </div>
+            </nav>
+            <div class="nav-toggle" id="nav-toggle">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <section class="home section">
+            <div class="home-container container grid">
+                <div class="home-content grid">
+                    <div class="home-img">
+                        <div class="main-globe">
+                            <div class="globe">
+                              <div class="globe-sphere"></div>
+                              <div class="globe-worldmap">
+                                <div class="globe-worldmap-back"></div>
+                                <div class="globe-worldmap-front"></div>
+                              </div>
+                              <div class="globe-shadow"></div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="home-data">
+                        <h1 class="home-data-title">We are Creation</h1>
+                        <h3 class="home-data-subtitle text second-text">experienced developers</h3>
+                        <p class="home-data-description">Results driven digital marketing agency. We will help increase the flow of customers in your business. We provide digital services for business. (Take your industry by creation)</p>
+                        <a href="#contact" class="button button-flex">
+                            FIND OUT THE SOLUTION <i class="fab fa-telegram-plane button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <h2 class="section-title">Why choose Creation?</h2>
+            <span class="section-subtitle">About company</span>
+
+            <div class="about-container container grid reveal">
+                <div>
+                <h1 class="about-container-data-title">A WEB DEVELOPMENT, WEB DESIGN, 
+                    AND DIGITAL MARKETING AGENCY
+                </h1>
+
+                <div>   
+                    <div class="about-global-partners">
+                        <p class="about-global-partners-number number" akhi="50">0</p>
+                        <p class="about-global-partners-description">(ADD +) SATISFIED<br>PARTNERS<br>WORLDWIDE/ GLOBAL</p>
+                    </div>
+                </div>
+
+                <span>
+                    <p class="about-button">&#62; &#8594; We share useful tips for applying in projects</p>
+                    <p class="about-button">&#62; &#8594; About Us</p>
+                </span>
+
+                <div class="about-container-data-info">
+                    <div>
+                        <span class="about-container-data-info-title number" akhi="50">0</span>
+                        <span class="about-container-data-name">Experts in<br>the team</span>
+                    </div>
+                    <div>
+                        <span class="about-container-data-info-title number" akhi="50">0</span>
+                        <span class="about-container-data-name">Attracted clients<br>with our help/ Sucsesfully completed projects</span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="about-container-data">
+                    <div class="about-container-data-description">
+                        <p> Our main purpose is to build long-term relationships with partners by creating quality projects and conveying the value of a product to partners' customers.
+                        <br>We will be the last <strong>digital marketing agency</strong> you will ever need. <strong>Do not just be a client of any digital marketing agency, work together with the company you can trust.</strong>
+                        </p>
+                        <div class="nikita-ivanov">
+                            <img class="nikita-ivanov-photo" src="./images/nikita-ivanov.svg">
+                            <p class="about-founder-name-one">Nikita Ivanov<br>Founder</p>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a download="" href="pdf/Alexa-Cv.pdf" class="button button-flex">
+                            Let's work together <i class="fas fa-download button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section" id="services">
+            <h2 class="section-title">Services</h2>
+            <span class="section-subtitle">How we add value for your business</span>
+
+            <div class="services-container container grid">
+                <!-- SERVICES 1 -->
+                <div class="services-content">
+                    <div>
+                        <img class="test services-icon" src="./images/services-development.svg" alt="Services laptop">
+                        <h3 class="services-title">WEB <br> Development</h3>
+                    </div>
+
+                    <span class="button button-flex button-small button-link services-button">
+                        Learn More
+                        <span class="button-icon">&#129138;</span>
+                    </span>
+
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-title">UI/UX <br> Designer</h4>
+                            <i class="fas fa-times services-modal-close"></i>
+
+                            <div class="services-modal-services grid">
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>&#10003; Разработка корпоративных сайтов, 
+                                        лендингов, сайтов-визиток, 
+                                        интернет-магазинов, одноэкранные сайты, сайт-квиз</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Web page development.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I create ux element interactions.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SERVICES 2 -->
+                <div class="services-content">
+                    <div>
+                        <img class="test services-icon" src="./images/service-design.svg" alt="Services laptop">
+                        <i class="fas fa-arrows-alt-h services-icon"></i>
+                        <h3 class="services-title">Design</h3>
+                    </div>
+
+                    <span class="button button-flex button-small button-link services-button">
+                        Learn More
+                        <i class="fas fa-arrow-right button-icon"></i>
+                    </span>
+
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-title">Frontend<br> Developer</h4>
+                            <i class="fas fa-times services-modal-close"></i>
+
+                            <div class="services-modal-services grid">
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>✔ (Цвет и жирность) Дизайн логотипов, брендбуков, визиток, флаеров, банеров, полиграфическая продукция.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Web page development.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I create ux element interactions.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SERVICES 3 -->
+                <div class="services-content">
+                    <div>
+                        <img class="test services-icon" src="./images/services-seo.svg" alt="Services laptop">
+                        <i class="fas fa-pencil-alt services-icon"></i>
+                        <h3 class="services-title">Search Engine Optimization</h3>
+                    </div>
+
+                    <span class="button button-flex button-small button-link services-button">
+                        View More
+                        <i class="fas fa-arrow-right button-icon"></i>
+                    </span>
+
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-title">Branding<br> Designer</h4>
+                            <i class="fas fa-times services-modal-close"></i>
+
+                            <div class="services-modal-services grid">
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>SEO составление семантического ядра и написание альт-тегов, мета-тегов, регистрация в консолях Google и их настройка, настройка заголовков h1, h2</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Web page development.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I create ux element interactions.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SERVICES 4 -->
+                <div class="services-content">
+                    <div>
+                        <img class="test services-icon" src="./images/services-advertising.svg" alt="Services laptop">
+                        <i class="fas fa-pencil-alt services-icon"></i>
+                        <h3 class="services-title">Advertising</h3>
+                    </div>
+
+                    <span class="button button-flex button-small button-link services-button">
+                        View More
+                        <i class="fas fa-arrow-right button-icon"></i>
+                    </span>
+
+                    <div class="services-modal">
+                        <div class="services-modal-content">
+                            <h4 class="services-modal-title">Branding<br> Designer</h4>
+                            <i class="fas fa-times services-modal-close"></i>
+
+                            <div class="services-modal-services grid">
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Контекстная реклама в Яндекс и Google с использованием всех инструментов продвижения. Таргетированная реклама, ведение группы или аккаунта в Fb</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>Web page development.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I create ux element interactions.</p>
+                                </li>
+                                <li class="services-modal-service">
+                                    <i class="far fa-check-circle services-modal-icon"></i>
+                                    <p>I position your company brand.</p>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Projects</h2>
+            <span class="section-subtitle">completed works</span>
+
+            <div class="portfolio__wrapper container grid">
+                <a class="portfolio__card" href="#leleka-art-school">
+                    <div>
+                        <img class="portfolio__card-img" src="./images/project-preview.svg"
+                            alt="Leleka art school preview">
+                    </div>
+                    <h3 class="portfolio__card-title">Description
+                    </h3>
+                    <p class="portfolio__card-type">View the project</p>
+                </a>
+                <a class="portfolio__card popup-open" href="#nobel">
+                    <div class="portfolio__card-block">
+                        <img class="portfolio__card-img" src="./images/project-preview.svg"
+                            alt="Nobel preview">
+                    </div>
+                    <h3 class="portfolio__card-title">Description</h3>
+                    <p class="portfolio__card-type">View the project</p>
+                </a>
+                <a class="portfolio__card popup-open" href="#profit-trade">
+                    <div class="portfolio__card-block">
+                        <img class="portfolio__card-img" src="./images/project-preview.svg"
+                            alt="Profit-trade preview">
+                    </div>
+                    <h3 class="portfolio__card-title">Description</h3>
+                    <p class="portfolio__card-type">View the project</p>
+                </a>
+                <a class="portfolio__card popup-open" href="#oy-spina">
+                    <div class="portfolio__card-block">
+                        <img class="portfolio__card-img" src="./images/project-preview.svg"
+                            alt="Oy-spina preview">
+                    </div>
+                    <h3 class="portfolio__card-title">Description <br> Description</h3>
+                    <p class="portfolio__card-type">View the project</p>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- CONTACT ME -->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Describe your tasks</h2>
+            <span class="section-subtitle">and we will offer solution</span>
+
+            <div class="contact-container container grid">
+                <div class="contact-items">
+                    <div class="contact-information">
+                        <p>If you have additional questions, 
+                            please don't hesitate to ask.</p>
+                        <i class="fas fa-phone contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Call Us</h3>
+                            <span class="contact-subtitle">999-888-777</span>
+                        </div>
+                    </div>
+                    <div class="contact-information">
+                        <i class="far fa-envelope contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Email Us</h3>
+                            <span class="contact-subtitle">info@creation-agency.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-information">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+
+                        <div>
+                            <h3 class="contact-title">Location</h3>
+                            <span class="contact-subtitle">Lithuania, Vilnius</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact-form grid">
+                    <div class="contact-inputs grid">
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Name</label>
+                            <input type="text" class="contact-input">
+                        </div>
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Email</label>
+                            <input type="email" class="contact-input">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Tasks, questions.</label>
+                            <textarea style="resize: none;" rows="5" class="contact-input" placeholder="Tasks, questions."></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="contact-button">
+                    <a href="#" class="button button-flex">
+                        FIND OUT THE SOLUTION<i class="fab fa-telegram-plane button-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <article class="portfolio section" id="blog">
+            <h2 class="section-title">Blog</h2>
+            <span class="section-subtitle">useful articles to apply in your project</span>
+
+            <div class="slider">
+                <div class="slide-track">
+
+                    <article class="slide">
+                        <img src="./images/service-design.svg" alt="">
+                        <h3>Article 1</h3>
+                        <p class="article-short-description">Short article description. Add button "Read"</p>
+                        <time class="article-date" datetime="2022-12-18">18.12.2022</time>
+                    </article>                    
+                    <article class="slide">
+                        <img src="./images/services-advertising.svg" alt="">
+                        <h3>Article 2</h3>
+                    </article>
+                    <article class="slide">
+                        <img src="./images/services-development.svg" alt="">
+                        <h3>Article 3</h3>
+                    </article>
+                    <article class="slide">
+                        <img src="./images/services-seo.svg" alt="">
+                        <h3>Article 4</h3>
+                    </article>
+
+                    <article class="slide">
+                        <img src="./images/service-design.svg" alt="">
+                        <h3>Article 1</h3>
+                    </article>                    
+                    <article class="slide">
+                        <img src="./images/services-advertising.svg" alt="">
+                        <h3>Article 2</h3>
+                    </article>
+                    <article class="slide">
+                        <img src="./images/services-development.svg" alt="">
+                        <h3>Article 3</h3>
+                    </article>
+                    <article class="slide">
+                        <img src="./images/services-seo.svg" alt="">
+                        <h3>Article 4</h3>
+                    </article>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-container container grid">
+                <div class="footer-texts">
+                    <a class="logotype" href="#">
+                        <img src="./images/footer-logotype-with-slogan.svg" alt='Creation agency logotype with slogan "Make it simple, do it with love"'>
+                    </a>
+                </div>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="#about" class="footer-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="footer-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="footer-social" src="./images/facebook-icon.svg">
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img class="footer-social" src="./images/linkedin-icon.svg">
+                    </a>
+                    <a href="https://github.com/" target="_blank">
+                        <img class="footer-social" src="./images/github-icon.svg">
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copy">Privacy policy. Made with &#10084;</p>
+            <p class="footer-copy">Copyright &#169; 2022-2023 Creation Digital Agency. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/027d3564f6.js" crossorigin="anonymous"></script>
+    <!-- MAIN JS -->
+    <script src="js/main.js"></script>
+</body>
 </html>
