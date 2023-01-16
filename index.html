@@ -68,38 +68,37 @@
                 <img src="./images/logotype.svg" alt="Creation agency logotype">
             </a>
 
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list grid">
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">
+            <nav class="navigation-menu">
+                <ul class="navigation-menu__list grid">
+                    <li>
+                        <a class="navigation-menu__link" href="#about">
                             About
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">
+                    <li>
+                        <a class="navigation-menu__link" href="#services">
                             Services
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">
+                    <li>
+                        <a class="navigation-menu__link" href="#portfolio">
                             Projects
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">
+                    <li>
+                        <a class="navigation-menu__link" href="#contact">
                             Contact
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">
-                            Blog ?
+                    <li>
+                        <a class="navigation-menu__link" href="/blog">
+                            Blog
                         </a>
                     </li>
-                    <div class="header__language-menu">
-                        <button href="#" class="nav-link">
-                            EN
+                    <div class="language-menu">
+                        <button class="navigation-menu__link" href="#">
+                            EN &#9662;
                         </button>
-                        &#9662;
                         <ul class="language-menu__list">
                                 <li><a href="https://creation-agency.com/lt">LT</a></li>
                                 <li><a href="https://creation-agency.com/ru">RU</a></li>
@@ -124,6 +123,7 @@
                     </a>
                 </div>
             </nav>
+            <!-- mobile-button -->
             <div class="nav-toggle" id="nav-toggle">
                 &#9776;
             </div>
@@ -174,14 +174,9 @@
                 <div>   
                     <div class="about-global-partners">
                         <p class="about-global-partners-number number" akhi="50">0</p>
-                        <p class="about-global-partners-description">(ADD +) SATISFIED<br>PARTNERS<br>WORLDWIDE/ GLOBAL</p>
+                        <p class="about-global-partners-description">SATISFIED GLOBAL<br>PARTNERS</p>
                     </div>
                 </div>
-
-                <span>
-                    <p class="about-button">&#62; &#8594; We share useful tips for applying in projects</p>
-                    <p class="about-button">&#62; &#8594; About Us</p>
-                </span>
 
                 <div class="about-container-data-info">
                     <div>
@@ -193,6 +188,10 @@
                         <span class="about-container-data-name">Attracted clients<br>with our help/ Sucsesfully completed projects</span>
                     </div>
                 </div>
+                <span>
+                    <a class="navigation-menu__link">&#62; &#8594; We share useful tips for applying in projects, read our blog</a><br>
+                    <a class="navigation-menu__link">&#62; &#8594; More about us</a>
+                </span>
                 </div>
 
                 <div class="about-container-data">
@@ -302,8 +301,7 @@
                 <!-- SERVICES 3 -->
                 <div class="services-content">
                     <div>
-                        <img class="test services-icon" src="./images/services-seo.svg" alt="Services laptop">
-                        <i class="fas fa-pencil-alt services-icon"></i>
+                        <img class="services-icon" src="./images/services-seo.svg" alt="Services laptop">
                         <h3 class="services-title">Search Engine Optimization</h3>
                     </div>
 
@@ -338,52 +336,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- SERVICES 4 -->
-                <div class="services-content">
-                    <div>
-                        <img class="test services-icon" src="./images/services-advertising.svg" alt="Services laptop">
-                        <i class="fas fa-pencil-alt services-icon"></i>
-                        <h3 class="services-title">Advertising</h3>
-                    </div>
-
-                    <span class="button button-flex button-small button-link services-button">
-                        View More
-                        <i class="fas fa-arrow-right button-icon"></i>
-                    </span>
-
-                    <div class="services-modal">
-                        <div class="services-modal-content">
-                            <h4 class="services-modal-title">Branding<br> Designer</h4>
-                            <i class="fas fa-times services-modal-close"></i>
-
-                            <div class="services-modal-services grid">
-                                <li class="services-modal-service">
-                                    <i class="far fa-check-circle services-modal-icon"></i>
-                                    <p>Контекстная реклама в Яндекс и Google с использованием всех инструментов продвижения. Таргетированная реклама, ведение группы или аккаунта в Fb</p>
-                                </li>
-                                <li class="services-modal-service">
-                                    <i class="far fa-check-circle services-modal-icon"></i>
-                                    <p>Web page development.</p>
-                                </li>
-                                <li class="services-modal-service">
-                                    <i class="far fa-check-circle services-modal-icon"></i>
-                                    <p>I create ux element interactions.</p>
-                                </li>
-                                <li class="services-modal-service">
-                                    <i class="far fa-check-circle services-modal-icon"></i>
-                                    <p>I position your company brand.</p>
-                                </li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- PORTFOLIO -->
         <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">Projects</h2>
-            <span class="section-subtitle">completed works</span>
+            <h2 class="section-title">Our projects</h2>
+            <span class="section-subtitle">Gallery of completed works</span>
 
             <div class="portfolio__wrapper container grid">
                 <a class="portfolio__card" href="#leleka-art-school">
@@ -429,35 +388,6 @@
             <span class="section-subtitle">and we will offer solution</span>
 
             <div class="contact-container container grid">
-                <div class="contact-items">
-                    <div class="contact-information">
-                        <p>If you have additional questions, 
-                            please don't hesitate to ask.</p>
-                        <i class="fas fa-phone contact-icon"></i>
-
-                        <div>
-                            <h3 class="contact-title">Call Us</h3>
-                            <span class="contact-subtitle">999-888-777</span>
-                        </div>
-                    </div>
-                    <div class="contact-information">
-                        <i class="far fa-envelope contact-icon"></i>
-
-                        <div>
-                            <h3 class="contact-title">Email Us</h3>
-                            <span class="contact-subtitle">info@creation-agency.com</span>
-                        </div>
-                    </div>
-                    <div class="contact-information">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-
-                        <div>
-                            <h3 class="contact-title">Location</h3>
-                            <span class="contact-subtitle">Lithuania, Vilnius</span>
-                        </div>
-                    </div>
-                </div>
-
                 <form action="" class="contact-form grid">
                     <div class="contact-inputs grid">
                         <div class="contact-content">

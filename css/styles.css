@@ -28,6 +28,16 @@
     url("../fonts/Ubuntu-Bold.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: Ubuntu;
+  font-style: italic;
+  font-weight: 300;
+  src:
+    url("../fonts/Ubuntu-Italic.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Italic.woff") format("woff"),
+    url("../fonts/Ubuntu-Italic.ttf") format("truetype");
+}
+
 :root {
   --header-height: 3rem;
   /* Colors */
@@ -92,7 +102,7 @@
   }
 }
 
-/* BASE */
+/* Basic styles */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -131,7 +141,24 @@ img {
   height: auto;
 }
 
-/* REUSABLE CSS CLASSES */
+/* Layout */
+.container {
+  max-width: 920px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Reusable classes */
+.logotype:hover {
+  opacity: 0.5;
+  transition: 0.4s ease-in-out;
+}
+
 .section {
   padding: 2rem 0 4rem;
 }
@@ -146,24 +173,12 @@ img {
   margin-bottom: var(--mb-3);
 }
 
-.section-title, 
+.section-title,
 .section-subtitle {
   text-align: center;
 }
 
-/* LAYOUT */
-.container {
-  max-width: 920px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-/* HEADER */
+/* Header section */
 header {
   width: 100%;
   position: fixed;
@@ -186,19 +201,14 @@ header .nav {
   justify-content: space-between;
 }
 
-header .nav-menu .active-link {
-  color: var(--color-orange);
+.navigation-menu .active-link {
   padding-bottom: 5px;
+  color: var(--color-orange);
   border-bottom: 1.9px solid var(--color-orange);
 }
 
-header .nav-menu.show-menu {
+.navigation-menu.show-menu {
   right: 0;
-}
-
-.logotype:hover {
-  transition: 0.4s ease-in-out;
-  opacity: 0.5;
 }
 
 header .nav-toggle {
@@ -208,6 +218,7 @@ header .nav-toggle {
 
 header .nav-toggle:hover {
   color: var(--first-color);
+  cursor: pointer;
 }
 
 header .nav-toggle {
@@ -215,21 +226,19 @@ header .nav-toggle {
   cursor: pointer;
 }
 
-.nav .nav-list {
+.navigation-menu__list {
   display: flex;
   column-gap: 2rem;
 }
 
-header .nav-link {
+.navigation-menu__link {
   font-size: var(--normal-font-size);
   font-weight: var(--font-bold);
   color: var(--title-color);
-
-  /* or text-color-default */
   transition: 0.3s;
 }
 
-header .nav-link:hover {
+.navigation-menu__link:hover {
   color: var(--color-orange);
 }
 
@@ -260,14 +269,14 @@ header .nav-close:hover {
 }
 
 /* ------------ Language menu ---------------- */
-.header__language-menu {
+.language-menu {
   padding-left: 10px;
   cursor: pointer;
   position: relative;
   display: inline-block;
 }
 
-.header__language-menu > .nav-link {
+.language-menu > .navigation-menu__link {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-bold);
@@ -275,15 +284,16 @@ header .nav-close:hover {
 
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.header__language-menu a {
+.language-menu a {
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
 
-.header__language-menu a:hover {
+.language-menu a:hover {
   color: var(--color-orange);
 }
 
@@ -310,7 +320,7 @@ header .nav-close:hover {
   border-bottom: 1px solid var(--color-orange);
 }
 
-.header__language-menu:hover .language-menu__list {
+.language-menu:hover .language-menu__list {
   opacity: 1;
 }
 
@@ -338,7 +348,9 @@ header .nav-close:hover {
 }
 
 .home-container .home-content .home-data-title {
-  font-size: var(--big-font-size);
+  font-size: var(--h1-font-size);
+  font-style: italic;
+
 }
 
 .home-container .home-content .home-data-subtitle {
@@ -559,6 +571,7 @@ header .nav-close:hover {
 }
 
 .about-global-partners-number {
+  -webkit-text-stroke: 0.7px var(--title-color);
   font-size: var(--big-font-size);
   font-weight: var(--font-bold);
 
@@ -743,31 +756,27 @@ z-index: 1;
 
 /* SERVICES */
 .services-container {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .services-container .services-content {
-  position: relative;
   background-color: var(--container-color);
   padding: 3.5rem .5rem 1.25rem 1.5rem;
   border: 1px solid #0000002d;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.5s ease-in-out;
-  max-width: 200px;
 }
 
 .services-container .services-content:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .services-container .services-content .services-icon {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--first-color);
+  max-width: 100%;
+  height: auto;
   margin-bottom: var(--mb-1);
 }
 
@@ -845,29 +854,6 @@ z-index: 1;
 /* CONTACT ME */
 .contact-container {
   row-gap: 3rem;
-}
-
-.contact-container .contact-information {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: var(--mb-2);
-}
-
-.contact-container .contact-information .contact-icon {
-  font-size: 2rem;
-  color: var(--first-color);
-  margin-right: var(--mb-0-75);
-}
-
-.contact-container .contact-information .contact-title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-.contact-container .contact-information .contact-subtitle {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
 }
 
 .contact-container .contact-content {
@@ -1099,24 +1085,24 @@ z-index: 1;
   }
 }
 
-/* For nav-menu devices */
+/* For navigation-menu devices */
 @media screen and (max-width: 768px) {
-  .nav-menu {
+  .navigation-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 45vw;
+    width: 60vw;
     height: 100%;
+    padding: 4rem 1.5rem;
     background-color: var(--body-color);
-    padding: 4rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     transition: 0.8s;
   }
-  .nav-list {
+  .navigation-menu__list {
     flex-direction: column;
     align-items: flex-start;
   }
-  .header__language-menu {
+  .language-menu {
     padding: 0;
   }
   .language-menu__list a {
@@ -1144,13 +1130,6 @@ z-index: 1;
   .portfolio__card {
     width: 45%;
     height: 58%;
-  }
-  .contact-items {
-    display: flex;
-    justify-content: space-around;
-  }
-  .contact-items .contact-information {
-    align-items: center;
   }
   .contact-form {
     grid-template-columns: 1fr;
