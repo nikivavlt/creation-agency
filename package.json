@@ -1,0 +1,29 @@
+{
+  "name": "creation-agency",
+  "version": "1.0.0",
+  "description": "Responsive website development from scratch using plain JavaScript, CSS (SCSS) and HTML.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikivavlt/creation-agency.git"
+  },
+  "author": "Nikita Ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikivavlt/creation-agency/issues"
+  },
+  "homepage": "https://github.com/nikivavlt/creation-agency#readme",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.3.0"
+  }
+}
