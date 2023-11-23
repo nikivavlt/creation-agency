@@ -1,30 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Creation Agency | Digital Development</title>
+    <link rel="alternate" hreflang="lt" href="https://creation-agency.com/lt/">
+    <link rel="alternate" hreflang="ru" href="https://creation-agency.com/ru/">
+
+    <link rel="icon" type="image/x-icon" href="./favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <meta name="msapplication-config" content="./favicons/site.xml">
+
+    <meta name="author" content="Nikita Ivanov">
+    <meta name="copyright" content="© 2022-2023 Creation Agency">
+    <meta name="adress" content="Lithuania">
+    <meta name="description"
+        content="We provide digital development services, creation-agency focused on websites development, design, advertising and SEO optimization.">
+    <meta name="keywords"
+        content="Creation Agency, creation, creation-agency, digital development, digital marketing, internet marketing, website development, web development, design, web design, advertising, seo, search engine optimization">
+    <meta name="application-name" content="Creation Digital Agency">
+    <!-- Facebook -->
+    <meta property="og:url" content="https://creation-agency.com/">
+    <meta property="og:title" content="Creation Agency | Digital Development">
+    <meta property="og:site_name" content="Creation Agency">
+    <meta property="og:description"
+        content="We provide digital development services, creation-agency focused on websites development, design, advertising and SEO optimization.">
+    <meta property="og:image" content="https://creation-agency.com/images/logotype.svg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="lt_LT">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:type" content="website">
+    <!-- Twiter -->
+    <meta name="twitter:title" content="Creation Agency | Digital Development">
+    <meta name="twitter:description"
+        content="We provide digital development services, creation-agency focused on websites development, design, advertising and SEO optimization.">
+    <meta name="twitter:site" content="Creation Agency">
+    <meta name="twitter:creator" content="Nikita Ivanov">
+    <meta name="twitter:card"
+        content="We provide digital development services, creation-agency focused on websites development, design, advertising and SEO optimization.">
+    <meta name="twitter:image" content="https://creation-agency.com/images/logotype.svg">
+    <meta name="twitter:url" content="https://creation-agency.com/">
+    <!-- Other... -->
+    <meta itemprop="name" content="Creation Digital Agency">
+    <meta itemprop="url" content="https://creation-agency.com/">
+    <meta itemprop="description"
+        content="We provide digital development services, creation-agency focused on websites development, design, advertising and SEO optimization.">
     <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
     <header>
+        <div class="header-container container">
+            <a class="logotype" href="#">
+                <img src="./images/logotype.svg" alt="Creation Agency logotype">
+            </a>
+            <nav class="navigation-bar">
+                <ul class="navigation-bar__list grid">
+                    <li>
+                        <a class="navigation-bar__link" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="navigation-bar__link" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="navigation-bar__link" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="navigation-bar__link" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="navigation-bar__link" href="/blog">Blog</a>
+                    </li>
+                    <li class="language-menu">
+                        <a class="navigation-bar__link" href="#">
+                            EN &#9662;
+                        </a>
+                        <ul class="language-menu__list">
+                            <li>
+                                <a class="language-menu__link" href="/lt">LT</a>
+                            </li>
+                            <li>
+                                <a class="language-menu__link" href="/ru">RU</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navigation-bar__socials">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img class="navigation-bar__social-icon" src="./images/facebook-icon-blue.svg"
+                                alt="Facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img class="navigation-bar__social-icon" src="./images/linkedin-icon-blue.svg"
+                                alt="LinkedIn icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com" target="_blank">
+                            <img class="navigation-bar__social-icon" src="./images/github-icon-blue.svg"
+                                alt="GitHub icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="navigation-bar__contact-button">
+                    <a href="#contact" class="button button-flex">
+                        Start collaborating <img class="button-icon" src="./images/contact-icon.svg" alt="Contact icon">
+                    </a>
+                </div>
+            </nav>
+            <div id="hamburger-button">
+                <div></div>
+            </div>
+        </div>
     </header>
     <main>
-        <section>
+        <section id="primary">
+            <div class="container grid">
+                <div class="primary__content grid">
+                    <div class="globe">
+                        <div class="globe__sphere"></div>
+                        <div class="globe__worldmap">
+                            <div class="globe__worldmap-back"></div>
+                            <div class="globe__worldmap-front"></div>
+                        </div>
+                        <div class="globe__shadow"></div>
+                    </div>
+                    <div class="primary-data">
+                        <h1>
+                            Digital Development Agency
+                        </h1>
+                        <h2>
+                            We are
+                        </h2>
+                        <h3 class="primary-data__subtitle">
+                            experienced developers
+                        </h3>
+                        <p class="primary-data__description">
+                            Results driven digital agency. We will help increase the flow of customers in your business.
+                            Take your industry by creation.
+                        </p>
+                        <a href="#contact" class="button button-flex">
+                            FIND OUT THE SOLUTION <img class="button-icon" src="./images/contact-icon.svg"
+                                alt="Contact icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="about">
+            <h2 class="section-title">Why choose Creation?</h2>
+            <span class="section-subtitle">About company</span>
+            <div class="about-container container grid">
+                <div>
+                    <h2 class="about__title">
+                        WEB DEVELOPMENT
+                        AND UI/ UX DESIGN AGENCY
+                        WORLDWIDE
+                    </h2>
+                    <div>
+                        <div class="about__partners">
+                            <p class="about__partners-number number" maximum-value="70">0</p>
+                            <div class="about__partners-title">
+                                <p>SATISFIED GLOBAL</p>
+                                <p>PARTNERS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__information">
+                        <div>
+                            <span class="about__information-number number" maximum-value="1">0</span>
+                            <span class="about__information-title">
+                                <hr>
+                                <p>Experts in</p>
+                                <p>the team</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="about__information-number number" maximum-value="50">0</span>
+                            <span class="about__information-title">
+                                <hr>
+                                <p>Attracted clients</p>
+                                <p>with our help</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="about__description">
+                        <p> Our main purpose is to build long-term relationships with partners by creating quality
+                            projects and conveying the value of a product to partners' customers.</p>
+                        <p>We will be the last <strong>digital agency</strong> you will ever need. <strong>Don't just be
+                                a client of any digital agency, work together with the company you can
+                                trust.</strong></p>
+                        <div class="founder">
+                            <img class="founder__photo" src="./images/founder-photo.svg" alt="Photo of Nikita Ivanov">
+                            <div class="founder__full-name">
+                                <p>Nikita Ivanov</p>
+                                <p>Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__contact-button">
+                        <a href="#contact" class="button button-flex">
+                            Let's work together <img class="button-icon" src="./images/contact-icon.svg"
+                                alt="Contact icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="services">
+            <h2 class="section-title">Services</h2>
+            <span class="section-subtitle">How we add value for your business</span>
+            <div class="services-container container grid">
+                <div class="services__content">
+                    <img class="services__icon" src="./images/service-development.svg" alt="Development image">
+                    <div class="services__title">
+                        <h3>Web</h3>
+                        <h3>Development</h3>
+                    </div>
+                    <p class="services__description">
+                        We will help you develop interactive, responsive, accessible web applications. Build an
+                        outstanding application that’s perfectly
+                        compatible with any device.
+                    </p>
+                    <a href="#contact" class="button button-flex button-link services__button">
+                        Start conversation
+                        <span class="button-icon">&#129138;</span>
+                    </a>
+                </div>
+                <div class="services__content">
+                    <div>
+                        <img class="services__icon" src="./images/service-design.svg" alt="Design image">
+                        <div class="services__title">
+                            <h3>UI/ UX</h3>
+                            <h3>Design</h3>
+                        </div>
+                    </div>
+                    <p class="services__description">
+                        We will create a user-focused design for your business. Design is more
+                        than just beautiful layout, it’s about helping users get what they need. Great user
+                        experience leads to customer loyalty.
+                    </p>
+                    <a href="#contact" class="button button-flex button-link services__button">
+                        Start conversation
+                        <span class="button-icon">&#129138;</span>
+                    </a>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="projects">
+            <h2 class="section-title">Our projects</h2>
+            <span class="section-subtitle">Gallery of completed works</span>
+            <div class="projects-container container grid">
+                <a class="project" href="#">
+                    <div>
+                        <img class="project__image" src="./images/project-preview.svg" alt="First project image">
+                    </div>
+                    <h3 class="project__name">
+                        First project name
+                    </h3>
+                    <p class="project__button">View the project</p>
+                </a>
+                <a class="project" href="#">
+                    <div>
+                        <img class="project__image" src="./images/project-preview.svg" alt="Second project image">
+                    </div>
+                    <h3 class="project__name">
+                        Second project name
+                    </h3>
+                    <p class="project__button">View the project</p>
+                </a>
+                <a class="project" href="#">
+                    <div>
+                        <img class="project__image" src="./images/project-preview.svg" alt="Third project image">
+                    </div>
+                    <h3 class="project__name">
+                        Third project name
+                    </h3>
+                    <p class="project__button">View the project</p>
+                </a>
+                <a class="project" href="#">
+                    <div>
+                        <img class="project__image" src="./images/project-preview.svg" alt="Fourth project image">
+                    </div>
+                    <h3 class="project__name">
+                        Fourth project name
+                    </h3>
+                    <p class="project__button">View the project</p>
+                </a>
+            </div>
         </section>
-        <section>
+        <section id="contact">
+            <h2 class="section-title">Describe your tasks</h2>
+            <span class="section-subtitle">and we will offer solution</span>
+            <div class="container grid">
+                <form id="contact-form" class="grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__field">
+                            <label class="contact__label" for="name">Name*</label>
+                            <input class="contact__input" id="name" type="text" name="name">
+                            <small class="name-error"></small>
+                        </div>
+                        <div class="contact__field">
+                            <label class="contact__label" for="email">Email*</label>
+                            <input class="contact__input" id="email" type="text" name="email">
+                            <small class="email-error"></small>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="contact__field">
+                            <label class="contact__label" for="message">Message*</label>
+                            <textarea class="contact__input" style="resize: none;" rows="5" id="message"
+                                name="message"></textarea>
+                            <small class="message-error"></small>
+                        </div>
+                    </div>
+                    <div class="contact__information">Required fields are marked *</div>
+                    <div class="request-status"></div>
+                    <div class="contact__button">
+                        <button type="submit" class="button button-flex">
+                            FIND OUT THE SOLUTION<img class="button-icon" src="./images/contact-icon.svg"
+                                alt="Contact icon">
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
-        <section>
+        <section id="reviews">
+            <h2 class="section-title">Reviews</h2>
+            <span class="section-subtitle">partners about us</span>
+            <div class="reviews-container container">
+                <div class="reviews-slider">
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                    <div class="review">
+                        <div class="review__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p class="review__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                        <p class="review__person-name">Name Name</p>
+                        <p class="review__position">Company/ Position</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
+        <div class="footer-container container grid">
+            <a class="logotype" href="#">
+                <img src="./images/logotype-with-slogan.svg"
+                    alt="Creation Agency logotype with slogan “Keep it simple, do it with love”">
+            </a>
+            <ul class="footer-links">
+                <li>
+                    <a href="#about" class="footer-link">About</a>
+                </li>
+                <li>
+                    <a href="#services" class="footer-link">Services</a>
+                </li>
+                <li>
+                    <a href="#projects" class="footer-link">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </li>
+                <li>
+                    <a href="/blog" class="footer-link">Blog</a>
+                </li>
+            </ul>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img class="footer-social" src="./images/facebook-icon.svg" alt="Facebook icon">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img class="footer-social" src="./images/linkedin-icon.svg" alt="LinkedIn icon">
+                </a>
+                <a href="https://github.com/" target="_blank">
+                    <img class="footer-social" src="./images/github-icon.svg" alt="GitHub icon">
+                </a>
+            </div>
+        </div>
+        <a href="/privacy-policy">
+            <p class="footer-privacy">Privacy policy</p>
+        </a>
+        <p class="footer-copyright">© 2022-2023 Creation Agency. All rights reserved</p>
     </footer>
+    <div id="overlay"></div>
     <script src="scripts/main.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
+
 </html>
