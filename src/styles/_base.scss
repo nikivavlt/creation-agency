@@ -124,7 +124,7 @@ section {
 }
 
 .button-icon {
-    margin-left: 0.4rem;
+    margin-left: 0.3rem;
     font-size: 1.25rem;
     transition: 0.3s;
 }
@@ -562,13 +562,8 @@ header {
     padding: 2.5rem 1.5rem 2rem;
     border: 1px solid #0000002d;
     border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 15%);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 20%);
     transition: 0.5s ease-in-out;
-
-    &:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
-        transform: scale(1.1);
-    }
 
     .services__icon {
         max-width: 100%;
@@ -582,7 +577,8 @@ header {
     }
 
     .services__description {
-        height: 5.5rem;
+        height: 10rem;
+        padding-bottom: 2rem;
     }
 
     .services__description,
@@ -595,7 +591,7 @@ header {
 
         &:hover .button-icon {
             padding-right: 2px;
-            padding-left: 7px;
+            padding-left: 6px;
             transform: translateX(0.45rem);
             animation-name: arrow-animation;
             animation-duration: 1.6s;
@@ -645,7 +641,7 @@ header {
     z-index: 2;
     display: block;
     width: 390px;
-    height: 220px;
+    height: auto;
     margin: 5px;
     overflow: hidden;  
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 40%);
