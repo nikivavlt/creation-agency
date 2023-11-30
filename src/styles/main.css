@@ -743,7 +743,7 @@ header {
   font-size: var(--small-font-size);
 }
 
-.request-status {
+.form-status {
   display: flex;
   justify-content: center;
   color: var(--color-orange);
@@ -1086,5 +1086,3 @@ footer {
     margin: 0.5rem;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

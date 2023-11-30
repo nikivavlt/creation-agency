@@ -1,11 +1,11 @@
 const form = document.getElementById('contact-form');
-const requestStatus = document.querySelector('.request-status');
+const requestStatus = document.querySelector('.form-status');
 
 const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
 const postData = async (formData) => {
   try {
-    const response = await fetch('https://creation-api.onrender.com/messages', {
+    const response = await fetch('https://formsubmit.co/ajax/fafebbb8dceebeb2305b952ebf7b6897', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,13 +17,13 @@ const postData = async (formData) => {
       }),
     });
 
-    const status = await response.json();
+    const data = await response.json();
 
     if (response.ok) {
-      requestStatus.innerHTML = status;
+      requestStatus.innerHTML = 'Message sent successfully.';
       form.reset();
     } else {
-      throw new Error(JSON.stringify(status));
+      throw new Error(JSON.stringify(data));
     }
   } catch (error) {
     console.log(error);
