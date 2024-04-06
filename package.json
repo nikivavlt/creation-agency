@@ -1,6 +1,6 @@
 {
   "name": "creation-agency",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Responsive website development from scratch using plain JavaScript, CSS (SCSS) and HTML.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

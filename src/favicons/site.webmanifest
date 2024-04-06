@@ -1,4 +1,8 @@
 {
+    "name": "Creation Agency",
+    "start_url": "https://creation-agency.com/",
+    "theme_color": "#75b1ff",
+    "background_color": "#fbfcfe",
     "icons": [
       { "src": "./android-icon-192x192.png", "type": "image/png", "sizes": "192x192" },
       { "src": "./android-icon-256x256.png", "type": "image/png", "sizes": "256x256" },

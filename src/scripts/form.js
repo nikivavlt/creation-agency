@@ -1,11 +1,11 @@
 const form = document.getElementById('contact-form');
-const requestStatus = document.querySelector('.form-status');
+const requestStatus = document.querySelector('.request-status');
+const submissionURL = 'https://formsubmit.co/ajax/fafebbb8dceebeb2305b952ebf7b6897';
+const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
-const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-
-const postData = async (formData) => {
+const sendMessage = async (formData) => {
   try {
-    const response = await fetch('https://formsubmit.co/ajax/fafebbb8dceebeb2305b952ebf7b6897', {
+    const response = await fetch(submissionURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,10 +23,12 @@ const postData = async (formData) => {
       requestStatus.innerHTML = 'Message sent successfully.';
       form.reset();
     } else {
+      requestStatus.innerHTML = '<span style="color: var(--color-red); font-weight: var(--font-bold)">Something went wrong.. Please send an email to contact@creation-agency.com</span>';
       throw new Error(JSON.stringify(data));
     }
   } catch (error) {
-    console.log(error);
+    requestStatus.innerHTML = '<span style="color: var(--color-red); font-weight: var(--font-bold)">Something went wrong.. Please send an email to contact@creation-agency.com</span>';
+    throw new Error(error);
   }
 };
 
@@ -56,7 +58,7 @@ const handleSubmit = (event) => {
       }
     });
 
-  if (isFormValid) postData(formData);
+  if (isFormValid) sendMessage(formData);
 };
 
 form.addEventListener('submit', (event) => handleSubmit(event));

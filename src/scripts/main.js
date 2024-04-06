@@ -1,49 +1,61 @@
 const isMobile = (window.innerWidth <= 768);
-
 const navigationBar = document.querySelector('.navigation-bar');
 const navigationLinks = document.querySelectorAll('.navigation-bar__link');
+const contactButton = document.querySelector('.navigation-bar__contact-button > a.button[href="#contact"]');
 const hamburgerButton = document.getElementById('hamburger-button');
 const backgroundOverlay = document.getElementById('overlay');
-const contactButton = document.querySelector('a.button[href="#contact"]');
+
+const openMobileMenu = () => {
+  hamburgerButton.classList.add('toggle');
+  navigationBar.classList.add('show-bar');
+  backgroundOverlay.classList.add('show-overlay');
+};
+
+const closeMobileMenu = () => {
+  hamburgerButton.classList.remove('toggle');
+  navigationBar.classList.remove('show-bar');
+  backgroundOverlay.classList.remove('show-overlay');
+};
 
 if (isMobile) {
   hamburgerButton.addEventListener('click', () => {
-    hamburgerButton.classList.toggle('toggle');
-    navigationBar.classList.toggle('show-bar');
-    backgroundOverlay.classList.toggle('show-overlay');
+    if (hamburgerButton.classList.contains('toggle')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
   });
 
   [...navigationLinks, contactButton]
     .forEach((element) => element.addEventListener('click', () => {
-      navigationBar.classList.remove('show-bar');
-      hamburgerButton.classList.remove('toggle');
-      backgroundOverlay.classList.remove('show-overlay');
+      closeMobileMenu();
     }));
 }
 
-function incrementNumber(number, duration) {
+const incrementNumber = (number, duration) => {
+  const currentNumber = number;
+  const maximumValue = Number(currentNumber.getAttribute('maximum-value'));
   let startValue = 0;
-  const maximumValue = Number(number.getAttribute('maximum-value'));
 
   const counter = setInterval(() => {
     startValue += 1;
-    number.innerHTML = startValue;
+    currentNumber.innerHTML = startValue;
 
     if (startValue === maximumValue) {
       clearInterval(counter);
-      number.innerHTML = `${maximumValue}+`;
+      currentNumber.innerHTML = `${maximumValue}+`;
     }
   }, duration);
-}
+};
 
-function headerOnScroll() {
+const changeHeaderOnScroll = () => {
   const header = document.querySelector('header');
 
   if (window.scrollY >= 50 && header.className !== 'on-scroll') header.classList.add('on-scroll');
   else if (window.scrollY < 50 && header.className === 'on-scroll') header.classList.remove('on-scroll');
-}
+};
 
-function linksOnScroll() {
+const highlightLinksOnScroll = () => {
   const sections = document.querySelectorAll('section[id]');
   const scrollY = window.pageYOffset;
 
@@ -64,9 +76,9 @@ function linksOnScroll() {
       navigationLink.classList.remove('active-link');
     }
   });
-}
+};
 
-function revealContainer() {
+const revealContainer = () => {
   const hiddenContainer = document.querySelector('.about-container');
   const numbers = document.querySelectorAll('.number');
 
@@ -80,26 +92,28 @@ function revealContainer() {
 
     numbers.forEach((number) => incrementNumber(number, 100));
   }
-}
+};
 
-function typingAnimation() {
+const typeText = () => {
   const text = document.querySelector('.primary-data__subtitle');
+  const firstText = 'experienced developers';
+  const secondText = 'passionate designers';
 
   setTimeout(() => {
-    text.textContent = 'experienced developers';
+    text.textContent = firstText;
   }, 0);
   setTimeout(() => {
-    text.textContent = 'passionate designers';
+    text.textContent = secondText;
   }, 4885);
-}
+};
 
 window.addEventListener('scroll', () => {
   revealContainer();
-  headerOnScroll();
-  linksOnScroll();
+  changeHeaderOnScroll();
+  highlightLinksOnScroll();
 });
 
 window.addEventListener('load', () => {
-  typingAnimation();
-  setInterval(typingAnimation, 10000);
+  typeText();
+  setInterval(typeText, 10000);
 });
