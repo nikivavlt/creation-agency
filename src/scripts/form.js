@@ -23,6 +23,7 @@ const sendMessage = async (formData) => {
       requestStatus.innerHTML = 'Message sent successfully.';
       form.reset();
     } else {
+      // Find new solution for this.
       requestStatus.innerHTML = '<span style="color: var(--color-red); font-weight: var(--font-bold)">Something went wrong.. Please send an email to contact@creation-agency.com</span>';
       throw new Error(JSON.stringify(data));
     }
